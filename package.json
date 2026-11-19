@@ -1,12 +1,24 @@
 {
-  "name": "node_express_03",
+  "name": "task-flow-pro",
   "version": "1.0.0",
-  "description": "Simple Express server example",
+  "description": "A polished React and Express task management dashboard",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "dev": "concurrently \"node server.js\" \"vite --config client/vite.config.js\"",
+    "start": "node server.js",
+    "build": "vite build --config client/vite.config.js",
+    "preview": "vite preview --config client/vite.config.js"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.1.2",
+    "vite": "^6.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "lucide-react": "^0.468.0"
   }
 }
